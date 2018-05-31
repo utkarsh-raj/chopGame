@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Original Difficult Game!</title>
+	<link href="https://fonts.googleapis.com/css?family=Concert+One|Jua" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+	<script
+  	src="https://code.jquery.com/jquery-3.3.1.min.js"
+  	integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  	crossorigin="anonymous"></script>
+
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<div>
+		<h1>WELCOME TO THE GAME!</h1>
+		<ul>
+			<li><h4>Instructions to play the game - <a href="#" target="_blank">Click Here!</a></h4></li>
+			<li><h4>To know more about the game - <a href="https://www.activityvillage.co.uk/chopsticks-game" target="_blank"> Click Here!</a></h4></li>
+		</ul>
+		<table>
+			<thead>
+				<tr>
+					<td id = "playerOneName"><i class="fas fa-smile"></i> Player One</td>
+					<td id = "playerTwoName">Player Two <i class="far fa-smile"></i></td>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+
+	<div id = "table">
+		<table>
+			<thead></thead>
+			<tbody>
+				<tr>
+					<td id = "oppLeft" class = "numbers">1</td>
+					<td></td>
+					<td></td>
+					<td id = "oppRight" class = "numbers">1</td>
+				</tr>
+				<tr>
+					<td id = "playerLeft" class = "numbers">1</td>
+					<td></td>
+					<td></td>
+					<td id = "playerRight" class = "numbers">1</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="btn-group-lg" role="group" aria-label="...">
+		<button type="button" class="btn btn-default"><i class="fas fa-redo"></i> Start New Game</button>
+		<button type="button" class="btn btn-default"><i class="fas fa-divide"></i> Divide!</button>
+	</div>
+
+	<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>
