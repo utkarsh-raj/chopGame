@@ -4,17 +4,20 @@ var playerOneDown = document.querySelector("#playerLeft");
 var playerTwoDown = document.querySelector("#playerRight");
 var reset = document.querySelectorAll("button")[0];
 var divide = document.querySelectorAll("button")[1];
-playerTwo = document.querySelectorAll("thead td")[1];
+var info = document.getElementById("info");
 playerOne = document.querySelectorAll("thead td")[0];
-playerOneName = document.querySelector("#playerOneName");
-playerTwoName = document.querySelector("#playerTwoName");
+playerTwo = document.querySelectorAll("thead td")[1];
+playerOneName = document.querySelector("#name1");
+playerTwoName = document.querySelector("#name2");
 
 var i = 0;
 button = [playerOneUp, playerOneDown, playerTwoUp, playerTwoDown]
 resetGame();
 
-// playerOneName.textContent = prompt("Enter player one Name: ");
-// playerTwoName.textContent = prompt("Enter player two Name: ");
+window.setTimeout(function(){
+	playerOneName.innerHTML = "<i class='fas fa-smile'></i>"+prompt("Enter player one Name: ");
+	playerTwoName.innerHTML = prompt("Enter player two Name: ")+"<i class='fas fa-smile'></i>";
+},100)
 
 function display() {
 	for (i = 0; i < button.length; i++) {
@@ -48,12 +51,12 @@ function resetGame() {
 
 function highlight() {
 	if (currentTurn === 0) {
-		playerTwo.classList.remove("highlight");
-		playerOne.classList.add("highlight");
+		playerTwoName.classList.remove("highlight");
+		playerOneName.classList.add("highlight");
 	}
 	else if (currentTurn === 1) {
-		playerOne.classList.remove("highlight");
-		playerTwo.classList.add("highlight");
+		playerOneName.classList.remove("highlight");
+		playerTwoName.classList.add("highlight");
 	}
 };
 
@@ -75,6 +78,9 @@ function checkClick(player) {
 	}
 };
 
+// added by Jai
+var lastClicked;
+
 for (i = 0; i < button.length; i++) {
 	button[i].addEventListener("click", function() {
 		if (checkClick(this)) {
@@ -83,13 +89,16 @@ for (i = 0; i < button.length; i++) {
 			}
 			else if (readyForNext === false) {
 				previousValue = this.value;
+				this.classList.add("highlight");
 				readyForNext = true;
+				lastClicked=this;
 			}
 			else if (readyForNext === true) {
 				this.value = (this.value + previousValue) % 5;
 				display();
 				readyForNext = false;
 				currentTurn = (currentTurn + 1) % 2;
+				lastClicked.classList.remove('highlight');
 			}
 			checkWin();
 			highlight();
@@ -100,7 +109,11 @@ for (i = 0; i < button.length; i++) {
 
 reset.addEventListener("click", function() {
 	resetGame();
-	alert("Game Restarted!");
+	// alert("Game Restarted!");
+	info.textContent="Game Restarted"
+	window.setTimeout(function(){
+		info.textContent="";
+	},2000)
 });
 
 divide.addEventListener("click", function() {

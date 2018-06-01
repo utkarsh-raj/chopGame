@@ -19,34 +19,43 @@
 	<div>
 		<h1>WELCOME TO THE GAME!</h1>
 		<ul>
-			<li><h4>Instructions to play the game - <a href="#" target="_blank">Click Here!</a></h4></li>
-			<li><h4>To know more about the game - <a href="https://www.activityvillage.co.uk/chopsticks-game" target="_blank"> Click Here!</a></h4></li>
+			<li>
+				<h4>Instructions to play the game - <a href="Instructions.html" target="_blank">Click Here!</a></h4>
+			</li>
+			<li>
+				<h4>To know more about the game - <a href="https://www.activityvillage.co.uk/chopsticks-game" target="_blank"> Click Here!</a></h4>
+			</li>
 		</ul>
+		<p id=info></p>
 		<table>
 			<thead>
 				<tr>
-					<td id = "playerOneName"><i class="fas fa-smile"></i> Player One</td>
-					<td id = "playerTwoName">Player Two <i class="far fa-smile"></i></td>
+					<td id = "playerOneName"> 
+						<span id="name1" class="name">Player1</span>
+					</td>
+					<td id = "playerTwoName">
+						<span id="name2" class="name">Player2</span>
+					</td>
 				</tr>
 			</thead>
-			<tbody></tbody>
+<!-- 			<tbody></tbody>
 		</table>
 	</div>
 
 	<div id = "table">
 		<table>
-			<thead></thead>
+			<thead></thead> -->
 			<tbody>
 				<tr>
 					<td id = "oppLeft" class = "numbers">1</td>
-					<td></td>
-					<td></td>
+					<!-- <td></td>
+					<td></td> -->
 					<td id = "oppRight" class = "numbers">1</td>
 				</tr>
 				<tr>
 					<td id = "playerLeft" class = "numbers">1</td>
-					<td></td>
-					<td></td>
+<!-- 					<td></td>
+					<td></td> -->
 					<td id = "playerRight" class = "numbers">1</td>
 				</tr>
 			</tbody>
@@ -54,8 +63,12 @@
 	</div>
 
 	<div class="btn-group-lg" role="group" aria-label="...">
-		<button type="button" class="btn btn-default"><i class="fas fa-redo"></i> Start New Game</button>
-		<button type="button" class="btn btn-default"><i class="fas fa-divide"></i> Divide!</button>
+		<button type="button" class="btn btn-default">
+			<i class="fas fa-redo"></i> Start New Game
+		</button>
+		<button type="button" class="btn btn-default">
+			<i class="fas fa-divide"></i> Divide!
+		</button>
 	</div>
 
 	<script type="text/javascript" src="script.js"></script>
