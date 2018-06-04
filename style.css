@@ -1,29 +1,32 @@
 body {
-	float: center;
+	/*float: center;*/
+	height: 100%;
 	border: 10px solid red;
-	margin-top: 2%;
-	margin-left: 10%;
-	margin-right: 10%;
+	max-width: 800px;
+	width: 90%;
+	margin: 2% auto;
 	padding: 2%;
 	background: yellow;
 	font-size: 24px;
 	font-family: "Concert One", cursive;
 }
 
-#table {
-	margin-right: 10%;
+tbody {
+	/*margin-right: 10%;
 	margin-left: 10%;
 	margin-top: 5%;
-	margin-bottom: 5%;
+	margin-bottom: 5%*/;
+	margin: 5% 10%;
 }
 
 table {
 	text-align: center;
 	align-content: center;
-	margin: auto;
+	margin: 2% auto;
 	border-spacing: 10px;
 	border-collapse: separate;
 	border-radius: 5px;
+
 }
 
 .numbers {
@@ -32,6 +35,9 @@ table {
 	padding: 30px;
 }
 
+/*alter start*/
+
+/*
 thead td {
 	background: #00b8d8;
     text-align: center;
@@ -42,6 +48,24 @@ thead td {
     border: 5px solid yellow;
     border-radius: 5px;
 }
+*/
+
+thead td{
+	margin: 10px;
+}
+
+.name{
+	background: #00b8d8;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    padding: 5px;
+    margin: 10px;
+    border: 5px solid yellow;
+    border-radius: 5px;
+}
+
+/*alter end*/
 
 .button {
 	text-align: center;
@@ -89,4 +113,31 @@ tbody td {
 
 h4 {
 	font-family: "Concert One", cursive;
+}
+
+/*CSS added by Jai*/
+
+#playerOneName{
+	width: 50%;
+	text-align: center;
+}
+
+#playerTwoName{
+	width: 50%;
+	text-align: center;
+}
+
+h2{
+	text-align: center;
+}
+
+ul{
+	font-size: 1.5rem;
+}
+#info{
+	padding-top: 15px;
+	text-align: center;
+	font-size: 15px;
+	font-family: 'arial';
+	font-style: bold;
 }
